@@ -496,6 +496,135 @@
 	line-height:24px;
 	letter-spacing:1px;
 }
+.team_we_mation{
+	margin-top: 60px;
+}
+.team_we_list{
+	margin-bottom: 24px;
+}
+.team_we_list li{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.team_we_list h3{
+	text-align: center;
+}
+.team_we_list h5{
+	text-align: center;
+}
+.team_we_list li img{
+	width: 93px;
+	height: 93px;
+}
+.team_data_center img{
+	width: 100%;
+	height: 364px;
+}
+.team_add_title h1{
+	font-size:40px;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(34,34,34,1);
+	line-height:56px;
+}
+.team_add_title h4{
+	font-size:14px;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(136,136,136,1);
+	line-height:24px;
+	letter-spacing:1px;
+}
+.team_add_lists{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.team_add_list{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-left: 40px;
+}
+.team_add_list:nth-child(1){
+	padding-left: 0px;
+}
+.team_add_list:nth-child(4n + 1){
+	padding-left: 0px;
+}
+.team_add_list li img{
+	width: 100%;
+	height: 160px;
+}
+.team_add_list h2{
+	font-size:20px;
+	font-family:MicrosoftYaHei;
+	color:rgba(39,39,39,1);
+	line-height:26px;
+	letter-spacing:1px;
+	box-sizing: border-box;
+	padding: 0px 12px;
+}
+.team_add_list p{
+	font-size:14px;
+	font-family:MicrosoftYaHei;
+	color:rgba(39,39,39,1);
+	line-height:22px;
+	letter-spacing:1px;
+	box-sizing: border-box;
+	padding: 0px 12px;
+}
+.team_ask{
+	padding-left: 0rem;
+	padding-right: 0px;
+}
+.team_ask_list{
+	padding-left: 0rem;
+	padding-right: 0px;
+	background:rgba(238,255,245,1);
+	border:1px solid rgba(0,162,62,1);
+	box-sizing: border-box;
+	padding: 12px;
+}
+.work img{
+	width: 100%;
+}
+.team_form{
+	background:rgba(216,216,216,1);
+	box-sizing: border-box;
+	padding: 80px auto;
+}
+.team_forms{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.team_forms form{
+	width: 600px;
+	background: #FFFFFF;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	box-sizing: border-box;
+	padding: 55px 150px;
+}
+/* -------------------------------------------------------- */
+.house_img img{
+	width: 100%;
+	height: 312px;
+}
+.house_first{
+	margin-bottom: 60px;
+}
+.house_cost li img{
+	width: 100%;
+}
+.city_list{
+	background:rgba(216,216,216,1);
+	border:1px solid rgba(151,151,151,1);
+	box-sizing: border-box;
+	padding: 12px;
+}
 /* --------------------------------------------------------- */
 @media ( min-width : 768px) {
 	.col-sm-5ths {
@@ -863,5 +992,28 @@
 		letter-spacing:2px;
 		margin-top: 0px;
 		margin-bottom: 0px;
+	}
+	.team_we_list_last{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.team_we_list_last div{
+		box-sizing: border-box;
+		padding: 0px 0px 0px 91px;
+	}
+	.team_add_list{
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-left: 20px;
+	}
+	.team_add_list:nth-child(1){
+		padding-left: 0px;
+	}
+	.team_add_list:nth-child(4n + 1){
+		padding-left: 0px;
+	}
+	.team_add_list:nth-child(2n + 1){
+		padding-left: 0px;
 	}
 }
