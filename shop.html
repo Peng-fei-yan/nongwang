@@ -6,9 +6,11 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/format.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="js/jq.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
 		<title>农网</title>
 		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
@@ -37,10 +39,10 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="index.html">首页</a></li>
-						<li class="actives"><a href="shop.html">农网365商城</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">平台合作
+						<li name="index"><a first="nav1" href="index.html">首页</a></li>
+						<li name="shop"><a first="nav1" href="shop.html">农网365商城</a></li>
+						<li  name="teamwork" class="dropdown">
+							<a href="#" first="nav1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">平台合作
 								<img class="bot" src="images/bot.png" ></a>
 							<ul class="dropdown-menu">
 								<li><a href="teamwork.html">供应商</a></li>
@@ -192,35 +194,25 @@
 				<h1>新手指南</h1>
 				<h4>Newbie Guide</h4>
 			</div>
-			<div id="slidershow" class="carousel slide" data-ride="carousel" data-pause = "hover" data-wrap="true" style="">
-			 <!-- 设置图片轮播的顺序 -->
-				 <ol class="carousel-indicators">
-					 <li class="active" data-target="#slidershow" data-slide-to="0"></li>
-					 <li data-target="#slidershow" data-slide-to="1"></li>
-					 <li data-target="#slidershow" data-slide-to="2"></li>
-				 </ol>
-				 <!-- 设置轮播图片 -->
-				 <div class="carousel-inner">
-					 <div class="item active">
-						<a href="##"><img src="images/swiper.png" ></a>
-					 </div>
-					 <div class="item">
-						<a href="##"><img src="images/swiper.png" ></a>
-					 </div>
-					 <div class="item">
-						<a href="##"><img src="images/swiper.png" ></a>
-					 </div>
-				 </div>
-				 <a class="left carousel-control" role="button">
-				 <span class="glyphicon glyphicon-chevron-left">
-					 <img src="images/left.png" >
-				 </span>
-				 </a>
-				 <a class="right carousel-control" role="button">
-				 <span class="glyphicon glyphicon-chevron-right">
-					 <img src="images/right.png" >
-				 </span>
-				 </a>
+			<div class="swiper-container">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+						<img src="images/swiper.png" >
+					</div>
+			    <div class="swiper-slide">
+						<img src="images/swiper.png" >
+					</div>
+			    <div class="swiper-slide">
+						<img src="images/swiper.png" >
+					</div>
+			  </div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev">
+					<img src="images/left.png" >
+				</div><!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+				<div class="swiper-button-next">
+					<img src="images/right.png" >
+				</div><!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
 			</div>
 		</div>
 		<!-- -------------------------------------------------- -->

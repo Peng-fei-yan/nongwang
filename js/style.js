@@ -23,6 +23,25 @@ $(function(){
 			$(this).find('a>img').css('transform', 'rotate(0deg)')
 		}
 	})
+	// 导航切换
+	// $('.navbar-nav li').on('click',function(){
+	// 	console.log(1233)
+	// 	$(this).attr('class', 'actives').siblings().attr('class', '')
+	// 	// $(this).addClass('actives')
+	// })
+	var pageName = window.location.pathname
+	var pageNews = pageName.split('/')[2]
+	var tag = pageNews.split('.')[0]
+	if (tag == 'housekeep') {
+		$(".navbar-nav li[name='teamwork']").attr('class','actives')
+		$(".navbar-nav li[name='teamwork']").find(".dropdown-menu li[name='housekeep'] a").css('color', 'rgba(0,162,62,1)')
+	} else if (tag == 'teamwork') {
+		$(".navbar-nav li[name='teamwork']").attr('class','actives')
+		$(".navbar-nav li[name='teamwork']").find(".dropdown-menu li[name='teamworks'] a").css('color', 'rgba(0,162,62,1)')
+	}
+	$(".navbar-nav li[name='"+tag+"']").attr('class','actives')
+	
+	
 	// 新闻切换
 	// 动态传值
 	var tabIndex = 1
@@ -42,28 +61,73 @@ $(function(){
 		$('.news_zixun').css('display', 'block')
 	}
 	//新闻下拉加载
-	 // let sHeight = $(document).height()
-	 // let cHeight = $(window).height()
-	 // let height = $(window).scrollTop()
-	 // var page_count = 0
-	 // var pageAll = 100
-	 // var ispage = false
-	 // if (height + cHeight === sHeight) {
-	 //   if (page_count < pageAll) {
-	 //     page_count = page_count + 10
-	 //     if (page_count > pageAll) {
-	 //       ispage = false
-	 //     }
-	 //     // 加载数据
-	 //     this.ispage = true
-	 //   } else if (page_count === pageAll) {
-	 //   } else if (page_count > pageAll) {
-	 //     page_count = pageAll
-	 //     // this.SelectCity(this.city_id, this.type_id)
-	 //     ispage = false
-	 //   }
-	 // }
-	
+	var pathname = window.location.pathname
+	var news = pathname.split('/')[2]
+	if(news == 'news.html'){
+		var mobile_flag = isMobile()
+		if(mobile_flag){
+			$('.footer').hide()
+		} else {
+			$('.footer').show()
+		}
+		window.addEventListener('resize', function(){
+			mobile_flag = isMobile()
+			if(mobile_flag){
+				$('.footer').hide()
+			} else {
+				$('.footer').show()
+			}
+		})
+		console.log(mobile_flag)
+		var page_count = 0
+		var pageAll = 100
+		var ispage = false
+		window.addEventListener('scroll', function(){
+			mobile_flag = isMobile()
+			if(mobile_flag){
+				let sHeight = $(document).height()
+				let cHeight = $(window).height()
+				let height = $(window).scrollTop()
+				
+				if (height + cHeight === sHeight) {
+					if (page_count < pageAll) {
+						page_count = page_count + 10
+						if (page_count > pageAll) {
+							ispage = false
+						}
+						// 加载数据
+						console.log(page_count)
+						this.ispage = true
+					} else if (page_count === pageAll) {
+					} else if (page_count > pageAll) {
+						page_count = pageAll
+						// this.SelectCity(this.city_id, this.type_id)
+						ispage = false
+					}
+				}
+			}
+		})
+	}
+	// 判断移动还是pc
+	function isMobile() {
+		var userAgentInfo = navigator.userAgent;
+		var mobileAgents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad","iPod"];
+		var mobile_flag = false;
+		//根据userAgent判断是否是手机
+		for (var v = 0; v < mobileAgents.length; v++) {
+			if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+				mobile_flag = true;
+				break;
+			}
+		}
+		 var screen_width = window.screen.width;
+		 var screen_height = window.screen.height;   
+		 //根据屏幕分辨率判断是否是手机
+		 if(screen_width < 500 && screen_height < 800){
+			 mobile_flag = true;
+		 }
+		 return mobile_flag;
+	}
 	
 	$('.ele_news_title li').on('click', function(){
 		$(this).addClass('actives').siblings().removeClass('actives')
@@ -81,15 +145,53 @@ $(function(){
 		$(this).addClass('actives').siblings().removeClass('actives')
 	})
 	// 轮播
-	$(function(){
-		$("#slidershow").carousel({
-			interval:false
-		});
-		$("#slidershow a.left").click(function(){
-			$(".carousel").carousel("prev");
-		});
-		$("#slidershow a.right").click(function(){
-			$(".carousel").carousel("next");
-		});
-	});
+	// var mySwiper = new Swiper('.swiper-container', {
+	// 	autoplay: false,//可选选项，自动滑动
+	// 	loop: true,
+	// 	pagination: {
+	// 		el: '.swiper-pagination',//自动隐藏
+	// 		clickable :true,
+	// 	},
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	}
+	// })
+	// 锚点连接
+	$('.abouts1').on('click', function () {
+		window.scrollTo({
+			top: 50,
+			behavior: 'smooth'
+		})
+	})
+	$('.abouts2').on('click', function () {
+		window.scrollTo({
+			top: 300,
+			behavior: 'smooth'
+		})
+	})
+	$('.abouts3').on('click', function () {
+		window.scrollTo({
+			top: 850,
+			behavior: 'smooth'
+		})
+	})
+	$('.abouts4').on('click', function () {
+		window.scrollTo({
+			top: 1300,
+			behavior: 'smooth'
+		})
+	})
+	$('.eles1').on('click', function () {
+		window.scrollTo({
+			top: 50,
+			behavior: 'smooth'
+		})
+	})
+	$('.eles2').on('click', function () {
+		window.scrollTo({
+			top: 500,
+			behavior: 'smooth'
+		})
+	})
 })

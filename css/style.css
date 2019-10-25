@@ -14,7 +14,7 @@ a{
 .navbar-nav{
 	margin-left: 50px;
 }
-.navbar-default .navbar-nav .actives a{
+.navbar-default .navbar-nav .actives a[first='nav1']{
 	color:rgba(0,162,62,1);
 	background: none;
 }
@@ -79,6 +79,9 @@ a{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+.button_left a{
+	color: #000000;
 }
 .button1{
 	width:185px;
@@ -164,15 +167,23 @@ a{
 	margin-right: 0px;
 	margin-bottom: 20px;
 }
-.carousel-control.left{
-	background: none;
+.swiper-container{
+	margin-top: 20px;
 }
-.carousel-control{
-	left: -60px;
+.swiper-slide img{
+	width: 100%;
 }
-.carousel-control.right{
-	background: none;
-	right: -60px;
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+	background-image: none;
+	left: 10px;
+	right: auto;
+	outline: none;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+	background-image: none;
+	right: 18px;
+	left: auto;
+	outline: none;
 }
 .shop_title h1{
 	font-size: 20px;
@@ -354,6 +365,10 @@ a{
 	line-height:24px;
 	letter-spacing:1px;
 }
+.infor_ours_content_left2 li{
+	width: 100%;
+	text-align: center;
+}
 .news_img_list{
 	padding-left: 0px;
 	padding-right: 0px;
@@ -370,7 +385,7 @@ a{
 }
 .news_img_list img{
 	width: 100%;
-	height: 278px;
+	height: 190px;
 }
 .news_img_list h5{
 	margin-top: 16px;
@@ -417,19 +432,25 @@ a{
 	padding-right: 0px;
 }
 .foot_logo1{
-	width: 200px;
-	height: 160px;
-	background:rgba(107,158,127,1);
+	width:336px;
+	height:160px;
+	/* background:rgba(107,158,127,1); */
 	border-radius:12px;
 	opacity:0.4;
 	margin-bottom: 40px;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 20px;
 }
 .foot_logo2{
-	width: 200px;
-	height: 160px;
-	background:rgba(107,158,127,1);
+	width:336px;
+	height:160px;
+	/* background:rgba(107,158,127,1); */
 	border-radius:12px;
 	opacity:0.4;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 20px;
 }
 .foot_right{
 	color: #FFFFFF;
@@ -545,6 +566,13 @@ a{
 	line-height:50px;
 	letter-spacing:3px;
 	margin-bottom: 30px;
+}
+.team_banners h1 span{
+	font-size:20px;
+	font-family:MicrosoftYaHei;
+	color:rgba(0,162,62,1);
+	line-height:26px;
+	letter-spacing:1px;
 }
 .team_banners h3{
 	font-size:30px;
@@ -738,7 +766,7 @@ a{
 	padding: 5px 12px;
 	display: flex;
 	flex-direction: row;
-	min-height: 110px;
+	min-height: 176px;
 }
 .team_ask_list span{
 	color: #00A23E;
@@ -911,14 +939,20 @@ a{
 	margin-bottom: 60px;
 }
 .city_list{
-	background:rgba(216,216,216,1);
-	border:1px solid rgba(151,151,151,1);
 	box-sizing: border-box;
 	padding: 12px;
 }
+.ele1{
+	background:rgba(238,255,245,1);
+	border:1px solid rgba(0,162,62,1);
+}
+.ele2{
+	background:rgba(255,251,234,1);
+	border:1px solid rgba(252,208,0,1);
+}
 /* ----------------------------电商------------------------------- */
 .city_list h3{
-	font-size:18px;
+	font-size:16px;
 	font-family:PingFangSC-Regular,PingFang SC;
 	font-weight:400;
 	color:rgba(34,34,34,1);
@@ -935,13 +969,19 @@ a{
 	letter-spacing:1px;
 }
 .city_message_right li{
-	font-size:16px;
-	font-family:PingFangSC-Regular,PingFang SC;
-	font-weight:400;
-	color:rgba(51,51,51,1);
-	line-height:20px;
+	font-size: 16px;
+	font-family: PingFangSC-Regular,PingFang SC;
+	font-weight: 400;
+	color: rgba(51,51,51,1);
+	line-height: 40px;
+	height: 40px;
 	margin-bottom: 12px;
 	list-style-type: disc;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	text-overflow: ellipsis;
 }
 .city_content_left li{
 	text-align: right;
@@ -984,6 +1024,9 @@ a{
 .city_list_infor{
 	margin-top: 20px;
 	padding: 0px;
+}
+.city_list_infor .city_list{
+	height: 431px;
 }
 .city_mess{
 	margin-top: 20px;
@@ -1145,6 +1188,12 @@ a{
 	display: block;
 	text-decoration: none;
 }
+.page li.active{
+  background: rgb(0, 162, 62);
+}
+.page li.active a{
+  color: #ffffff;
+}
 .page li.jt_left a img{
 	transform: rotate(-90deg);
 }
@@ -1185,6 +1234,49 @@ a{
 }
 .news_zixun{
 	display: none;
+	margin-top: 20px;
+}
+/* --------------------新闻详情---------------------------------------------- */
+.news_detail{
+	background:rgba(242,243,246,1);
+	overflow: hidden;
+}
+.news_detail_center{
+	background: #FFFFFF;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	box-sizing: border-box;
+	padding: 49px 60px;
+}
+.news_detail_con img{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.news_detail_con h1{
+	font-size:24px;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(34,34,34,1);
+	line-height:33px;
+}
+.news_detail_con span{
+	font-size:14px;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(136,136,136,1);
+	line-height:20px;
+	margin-top: 16px;
+	margin-bottom: 31px;
+	display: block;
+}
+.news_detail_con div p{
+	font-size:16px;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(34,34,34,1);
+	line-height:28px;
+	letter-spacing:1px;
 }
 /* ---------------------------公司简介----------------------------- */
 .about_img{
@@ -1595,6 +1687,9 @@ a{
 	}
 }
 @media screen and (max-width: 1000px) {
+	.city_list_infor .city_list{
+		height: auto;
+	}
 	.team_we_list {
 		margin-bottom: 24px;
 		box-sizing: border-box;
@@ -1736,7 +1831,21 @@ a{
 		margin-left: 20px;
 	}
 }
+@media screen and (max-width: 900px) {
+	.foot_left {
+	    display: none;
+	}
+	.city_list_infor .city_list{
+		height: auto;
+	}
+}
 @media screen and (max-width: 800px) {
+	.foot_left {
+	  display: none;
+	}
+	.city_list_infor .city_list{
+		height: auto;
+	}
 	.about_bg li img {
 		width: auto;
 		height: 43px;
@@ -1975,8 +2084,43 @@ a{
 	}
 }
 @media screen and (max-width: 414px) {
-	.footer{
+	.team_ask_list{
+		padding-left: 0rem;
+		padding-right: 0px;
+		background:rgba(238,255,245,1);
+		border:1px solid rgba(0,162,62,1);
+		box-sizing: border-box;
+		padding: 5px 12px;
+		display: flex;
+		flex-direction: row;
+		min-height: 110px;
+	}
+	.news_detail_center {
+		background: #FFFFFF;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		box-sizing: border-box;
+		padding: 20px 20px;
+	}
+	.we_left h1{
+		font-size: 20px;
+		font-family: PingFangSC-Regular,PingFang SC;
+		font-weight: 400;
+		color: rgba(34,34,34,1);
+		line-height: 26px;
+	}
+	.shop_swiper{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.swiper-button-prev{
 		display: none;
+	}
+	.swiper-button-next{
+		display: none;
+	}
+	.footer{
+		/* display: none; */
 	}
 	.page{
 		display: none;
@@ -1991,7 +2135,7 @@ a{
 		background:url(../images/formbanner.png) no-repeat;
 		background-size: cover;
 		box-sizing: border-box;
-		padding: 80px 0px;
+		padding: 0px 0px;
 	}
 	.ch5{
 		background: url(../images/5_1.png) no-repeat;
@@ -2271,12 +2415,52 @@ a{
 	.team_forms form {
 		width: 600px;
 		background: #FFFFFF;
-		margin-top: 80px;
-		margin-bottom: 80px;
+		margin-top: 40px;
+		margin-bottom: 40px;
 		box-sizing: border-box;
 		padding: 15px 20px;
 	}
 	.teams_none {
 	  display: block;
+	}
+	.house_first_content {
+	  margin-top: 20px;
+	}
+	.house_first {
+		margin-bottom: 20px;
+		margin-top: 20px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.house_first .house_first_one{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.house_money {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		/* padding: 0px; */
+	}
+	.house_moneys{
+		padding: 0px;
+	}
+	.house_money1{
+		padding: 0px;
+	}
+	.news_title {
+	  margin-top: 20px;
+	}
+	.lnews_list {
+	  margin-top: 20px;
+	}
+	.about_component {
+	  margin-top: 20px;
+	}
+	.about_bgs {
+	  margin-top: 20px;
+	}
+	.about_core {
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 }
