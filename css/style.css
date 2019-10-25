@@ -1086,15 +1086,26 @@ a{
 .ele_news_left li img{
 	width: 100%;
 }
+.news_bgs{
+	width: 96%;
+	height: 355px;
+	position: absolute;
+	z-index: 3;
+	box-sizing: border-box;
+	padding: 10px;
+}
+.news_bgs:first-child{
+	padding-left: 0px;
+}
 .ele_news_right{
+	position: relative;
+	z-index: 9;
 	padding-left: 40px;
 	padding-right: 40px;
 	height: 300px;
-	background: url(../images/h8.png) no-repeat;
-	background-size: 100% 100%;
 	box-sizing: border-box;
 	color: #ffffff;
-	padding-top: 200px;
+	padding-top: 180px;
 }
 .ele_news_right li img{
 	width: 100%;
@@ -1687,6 +1698,12 @@ a{
 	}
 }
 @media screen and (max-width: 1000px) {
+	.news_bgs{
+		height: 330px;
+	}
+	.ele_news_right{
+		padding-top: 223px;
+	}
 	.city_list_infor .city_list{
 		height: auto;
 	}
@@ -1928,6 +1945,12 @@ a{
 	}
 }
 @media screen and (max-width: 600px) {
+	.news_bgs{
+		height: 330px;
+	}
+	.ele_news_right{
+		padding-top: 150px;
+	}
 	.shop_banner{
 		background: url(../images/shopbanner.png) no-repeat;
 		background-size: cover;
@@ -2081,6 +2104,14 @@ a{
 		background: url(../images/mode1.png) no-repeat;
 		background-size: contain;
 		margin-left: 20px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.news_bgs{
+		height: 300px;
+	}
+	.ele_news_right{
+		padding-top: 170px;
 	}
 }
 @media screen and (max-width: 414px) {
